@@ -1,0 +1,544 @@
+/* ==============================
+   CONFIGURAÇÕES GERAIS
+   ============================== */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-image: url("imagens/img-de-fundo.png");
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-color: #050505;
+
+    color: white;
+    font-family: "Orbitron", sans-serif;
+    line-height: 1.7;
+}
+
+
+/* ==============================
+   BANNER
+   ============================== */
+
+.banner {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: 180px;
+
+    object-fit: cover;
+
+    border: none;
+    border-bottom: 3px solid #e00000;
+
+    box-shadow: 0 0 25px rgba(224, 0, 0, 0.4);
+}
+
+
+/* ==============================
+   CABEÇALHO
+   ============================== */
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    padding: 18px 60px;
+
+    background: rgba(0, 0, 0, 0.95);
+    border-bottom: 2px solid #e00000;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.6);
+}
+
+
+/* ==============================
+   NAVEGAÇÃO
+   ============================== */
+
+nav {
+    display: flex;
+    gap: 35px;
+}
+
+nav a {
+    position: relative;
+
+    color: white;
+    text-decoration: none;
+
+    font-family: "Orbitron", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+nav a::after {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    bottom: -7px;
+
+    width: 0;
+    height: 2px;
+
+    background-color: #e00000;
+
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #e00000;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+
+/* ==============================
+   LOGO
+   ============================== */
+
+.logo {
+    display: block;
+
+    width: 300px;
+    max-width: 80%;
+
+    margin: 35px auto;
+
+    border: 3px solid #e00000;
+    border-radius: 10px;
+
+    box-shadow:
+        0 0 15px rgba(224, 0, 0, 0.5),
+        0 0 40px rgba(224, 0, 0, 0.15);
+
+    transform: none;
+
+    transition: 0.3s;
+}
+
+.logo:hover {
+    transform: scale(1.03);
+
+    box-shadow:
+        0 0 25px rgba(224, 0, 0, 0.7),
+        0 0 50px rgba(224, 0, 0, 0.25);
+}
+
+
+/* ==============================
+   SEÇÕES
+   ============================== */
+
+section {
+    width: 90%;
+    max-width: 1100px;
+
+    margin: 50px auto;
+
+    padding: 50px;
+
+    background: rgba(5, 5, 5, 0.88);
+
+    border: 1px solid #333;
+    border-left: 4px solid #e00000;
+    border-radius: 10px;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.5),
+        0 0 20px rgba(224, 0, 0, 0.08);
+}
+
+
+/* ==============================
+   TÍTULOS
+   ============================== */
+
+.titulo {
+    margin: 0 0 35px 0;
+
+    color: white;
+
+    font-size: 32px;
+    font-weight: 700;
+
+    text-align: center;
+    text-transform: uppercase;
+
+    letter-spacing: 3px;
+
+    text-shadow:
+        0 0 10px rgba(224, 0, 0, 0.5);
+}
+
+.sub-titulo {
+    margin: 35px 0 15px 0;
+
+    color: #e00000;
+
+    font-size: 20px;
+    font-weight: 600;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+}
+
+.paragrafo {
+    margin: 0 0 20px 0;
+
+    color: #dddddd;
+
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+
+    line-height: 1.8;
+}
+
+
+/* ==============================
+   SEÇÃO SOBRE
+   ============================== */
+
+#sobre {
+    border-left-color: #e00000;
+}
+
+
+/* ==============================
+   SEÇÃO PRODUTO
+   ============================== */
+
+#solucao {
+    border-left-color: #ffffff;
+}
+
+#solucao .sub-titulo {
+    color: #ff3333;
+}
+
+
+/* ==============================
+   SEÇÃO PITCH
+   ============================== */
+
+#pitch {
+    min-height: 250px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-left-color: #e00000;
+}
+
+#pitch .titulo {
+    margin: 0;
+}
+
+
+/* ==============================
+   SEÇÃO CONTATO
+   ============================== */
+
+#contato {
+    border-left-color: #e00000;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(0, 0, 0, 0.95),
+            rgba(25, 0, 0, 0.85)
+        );
+}
+
+
+/* Título do contato */
+
+#contato .titulo {
+    margin-bottom: 35px;
+}
+
+
+/* ==============================
+   FORMULÁRIO
+   ============================== */
+
+#formulario {
+    width: 80%;
+    max-width: 700px;
+
+    margin: auto;
+    padding: 35px;
+
+    background-color: #0b0b0b;
+
+    border: 1px solid #444;
+    border-top: 3px solid #e00000;
+    border-radius: 10px;
+
+    box-shadow:
+        0 0 25px rgba(224, 0, 0, 0.15);
+}
+
+
+/* Labels */
+
+#formulario label {
+    display: block;
+
+    margin: 18px 0 8px;
+
+    color: #ffffff;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    text-transform: uppercase;
+}
+
+
+/* Campos */
+
+#formulario input,
+#formulario textarea {
+    width: 100%;
+
+    padding: 13px 15px;
+
+    background-color: #050505;
+
+    color: white;
+
+    border: 1px solid #555;
+    border-radius: 5px;
+
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+
+    outline: none;
+
+    transition: 0.3s;
+}
+
+
+/* Foco nos campos */
+
+#formulario input:focus,
+#formulario textarea:focus {
+    border-color: #e00000;
+
+    box-shadow:
+        0 0 10px rgba(224, 0, 0, 0.35);
+}
+
+
+/* Placeholder */
+
+#formulario input::placeholder,
+#formulario textarea::placeholder {
+    color: #777;
+}
+
+
+/* Mensagem */
+
+#formulario textarea {
+    height: 160px;
+
+    resize: vertical;
+}
+
+
+/* Botão */
+
+#formulario button {
+    width: 100%;
+
+    margin-top: 25px;
+    padding: 14px;
+
+    background-color: #e00000;
+
+    color: white;
+
+    border: none;
+    border-radius: 5px;
+
+    font-family: "Orbitron", sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+#formulario button:hover {
+    background-color: #ff2020;
+
+    box-shadow:
+        0 0 20px rgba(224, 0, 0, 0.6);
+
+    transform: translateY(-2px);
+}
+
+#formulario button:active {
+    transform: translateY(0);
+}
+
+
+/* ==============================
+   RODAPÉ
+   ============================== */
+
+footer {
+    margin-top: 60px;
+    padding: 50px 10%;
+
+    background-color: #050505;
+
+    border-top: 3px solid #e00000;
+
+    box-shadow:
+        0 -10px 30px rgba(0, 0, 0, 0.5);
+}
+
+footer .sub-titulo {
+    margin-left: 0;
+}
+
+footer h3 {
+    margin-top: 25px;
+
+    color: #e00000;
+
+    font-size: 16px;
+}
+
+footer .paragrafo {
+    margin-left: 0;
+    margin-bottom: 10px;
+}
+
+
+/* ==============================
+   RESPONSIVIDADE
+   ============================== */
+
+@media (max-width: 700px) {
+
+    header {
+        justify-content: center;
+        padding: 15px 20px;
+    }
+
+    nav {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    nav a {
+        font-size: 11px;
+    }
+
+    .logo {
+        width: 220px;
+    }
+
+    section {
+        width: 94%;
+        padding: 30px 20px;
+    }
+
+    .titulo {
+        font-size: 24px;
+    }
+
+    .sub-titulo {
+        font-size: 17px;
+    }
+
+    .paragrafo {
+        font-size: 14px;
+    }
+
+    #formulario {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .banner {
+        height: 120px;
+    }
+}
+
+.pitch-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.pitch-card {
+    padding: 25px;
+    border: 1px solid #00ffcc;
+    border-radius: 15px;
+    background: rgba(0, 0, 0, 0.25);
+    transition: 0.3s;
+}
+
+.pitch-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px rgba(0, 255, 204, 0.3);
+}
+
+.pitch-card h3 {
+    margin-bottom: 10px;
+    color: #00ffcc;
+}
+
+.pitch-card p {
+    line-height: 1.6;
+}
+
+#pitch {
+    text-align: center;
+}
+
+#pitch > h2 {
+    display: block;
+    width: 100%;
+    margin: 0 0 30px 0;
+    text-align: center;
+}
+
+.pitch-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.nosso-pitch {
+    font-size: 42px;
+}
